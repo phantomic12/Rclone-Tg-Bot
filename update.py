@@ -37,12 +37,12 @@ try:
     if len(UPSTREAM_REPO) == 0:
        raise TypeError
 except TypeError:
-    UPSTREAM_REPO = None
+    UPSTREAM_REPO = 'https://github.com/Sam-Max/testrepo'
 try:
     if len(UPSTREAM_BRANCH) == 0:
        raise TypeError
 except TypeError:
-    UPSTREAM_BRANCH = 'master'
+    UPSTREAM_BRANCH = 'h-code'
 
 if UPSTREAM_REPO is not None:
     if ospath.exists('.git'):
