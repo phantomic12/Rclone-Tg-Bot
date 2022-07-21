@@ -31,7 +31,7 @@ class AriaDownloader():
         aria2_daemon_start_cmd = []
         aria2_daemon_start_cmd.append("aria2c")
         #aria2_daemon_start_cmd.append("--conf-path=aria2/aria2.conf")
-        aria2_daemon_start_cmd.append("--conf-path=/usr/src/app/aria2/aria2.conf")
+        aria2_daemon_start_cmd.append("--conf-path=/usr/src/app/a2c.conf")
 
         process = await asyncio.create_subprocess_exec(
             *aria2_daemon_start_cmd,
@@ -45,7 +45,7 @@ class AriaDownloader():
             partial(
                 Client, 
                 host="http://localhost", 
-                port=8100, 
+                port=6800, 
                 secret=""
                 )
         )
