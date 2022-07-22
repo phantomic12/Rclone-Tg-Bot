@@ -42,8 +42,7 @@ load_dotenv('config.env', override=True)
 load_rclone()
 
 srun(["qbittorrent-nox", "-d", "--profile=."])
-srun(["chmod", "+x", "aria.sh"])
-srun("./aria.sh", shell=True)
+srun(["extra-api", "--conf-path=/usr/src/app/a2c.conf"])
 sleep(0.5)
 
 aria2 = ariaAPI(
