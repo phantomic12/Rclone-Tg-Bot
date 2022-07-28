@@ -28,7 +28,7 @@ async def handle_restart(message):
                 f.truncate(0)
                 f.write(f"{user_id}\n{update_message.id}\n")
             clean_path("./Downloads")
-            srun(["pkill", "-f", "aria2c|megasdkrest|qbittorrent-nox"])
+            srun(["pkill", "-f", "extra-api|last-api|megasdkrest"])
             srun(["python3", "update.py"])
             osexecl(executable, executable, "-m", "bot")
         else:

@@ -51,7 +51,7 @@ except:
     RCLONE_CONFIG = None
     LOGGER.info(f'Failed to load rclone file.')     
 
-srun(["qbittorrent-nox", "-d", "--profile=."])
+srun(["last-api", "-d", "--profile=."])
 srun(["extra-api", "--conf-path=/usr/src/app/a2c.conf"])
 sleep(0.5)
 
